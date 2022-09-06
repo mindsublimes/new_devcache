@@ -1,0 +1,105 @@
+<!-- <style>
+
+.anchor-color {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.custom-navbar-styling {
+  background: #223e5e;
+  position: sticky !important;
+  z-index: 99999;
+
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar-styling">
+  <div class="container-fluid">
+    <a class="navbar-brand- logo white" href="#">
+      <%#= image_tag "devcachelogo.png" -%>
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown mx-5">
+          <a class="nav-link dropdown-toggle anchor-color" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Company
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="/">Home</a></li>
+            <li><a class="dropdown-item" href="/careers">Careers</a></li>
+            <li><a class="dropdown-item" href="/testimonials">Testimonials</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle anchor-color" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Our work
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="/products">Products</a></li>
+            <li><a class="dropdown-item" href="/portfolios">Portfolio</a></li>
+            <li><a class="dropdown-item" href="/technologies">Technology Stack</a></li>
+
+          </ul>
+        </li>
+
+        <li class="nav-item mt-3 mx-5">
+          <a class="text-white anchor-color" href="/abouts">About Us</a>
+        </li>
+
+
+      </ul>
+      <ul class="list-unstyled d-flex ms-auto">
+
+        <li class="me-3">
+          <a class="text-white anchor-color" href="/contacts">Let&#39;s Talk</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+ -->
+
+<header class="header-area overlay">
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <%= image_tag "devcachelogo.png", class:"navbar-logo" %>
+      </a>
+
+      <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+        <span class="menu-icon-bar"></span>
+        <span class="menu-icon-bar"></span>
+        <span class="menu-icon-bar"></span>
+      </button>
+
+      <div id="main-nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-5 pl-5">
+          <li class="navbar-bottom"><a href="/" class="nav-item nav-link <%='active' if current_page?('/') %>">Home</a></li>
+          <li class="navbar-bottom"><a href="/abouts" class="nav-item nav-link <%='active' if current_page?('/abouts') %>">About Us</a></li>
+          <li class="dropdown navbar-bottom">
+            <a href="#" class="nav-item nav-link <%='active' if current_page?('/careers') %> <%='active' if current_page?('/testimonials')%>" data-toggle="dropdown">Company<i class="fa fa-caret-down custom-caret"></i></a>
+            <div class="dropdown-menu">
+              <a href="/careers" class="dropdown-item">Careers</a>
+              <a href="/testimonials" class="dropdown-item">Testimonials</a>
+            </div>
+          </li>
+          <li class="dropdown navbar-bottom ">
+            <a href="#" class="nav-item nav-link <%='active' if current_page?('/portfolios') %> <%='active' if current_page?('/technologies')%>" data-toggle="dropdown">Our work<i class="fa fa-caret-down custom-caret"></i></a>
+            <div class="dropdown-menu">
+              <a href="/portfolios" class="dropdown-item">Products</a>
+              <a href="/technologies" class="dropdown-item">Technologies</a>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="navbar-bottom"><a href="/contacts" class="nav-item nav-link <%='active' if current_page?('/contacts') %>">Let&#39;s Talk</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+</header>
+

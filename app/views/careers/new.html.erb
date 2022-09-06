@@ -1,0 +1,58 @@
+<section class="no-padding sh-career">
+  <div class="sub-header ">
+    <span>Finding The Right One Isn't Hard</span>
+    <h1>JOB APPLYING</h1>
+    <ol class="breadcrumb justify-content-center">
+      <li>
+        <a href="/"><i class="fa fa-home"></i> HOME </a>
+      </li>
+      <li>
+        <a href="#">COMPANY     </a>
+      </li>
+      <li >
+        <a href="#">CAREER</a>
+      </li>
+      <li class="page-active">JOB APPLYING</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-12">
+          <div class="title-block title-contact">
+            <h2 class="mt-5">Job Form </h2>
+            <span class="bottom-title"></span>
+          </div>
+        </div>
+        <%= form_for @job_offer, url: careers_path, :method=> "post" do |f| %>
+          <div class="form-contact-warp">
+            <div class="col-md-4">
+              <%= f.label :Full_Name,class:"d-block" %>
+              <%= f.text_field :user_name, class:"form-control",required:"required"%>
+            </div>
+            <div class="col-md-4">
+              <%= f.label :Email ,class:"d-block" %>
+              <%= f.text_field :email , class:"form-control",required:"required" %>
+            </div>
+            <div class="col-md-4">
+              <%= f.label :Contact ,class:"d-block" %>
+              <%= f.text_field :user_number , class:"form-control",required:"required" %>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <%= f.label :Upload_resume %>
+                <%= f.file_field :resume, required:"required" %>
+              </div>
+               <%= button_tag type: 'submit', class: "btn btn-primary submit-btn" do %>
+                <i class="fa fa-paper-plane pr-3" aria-hidden="true"></i>Send
+              <% end %>
+            </div>
+          </div>
+          <% end -%>
+      </div>
+    </div>
+  </div>
+</section>
